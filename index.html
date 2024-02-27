@@ -6,8 +6,10 @@
 test!
 
 <script>
-  var key=process.env.API_KEY;
-  console.log(key);
+
+	require('dotenv').config()
+	console.log(process.env.API_KEY)
+
 </script>
   
 </body>
