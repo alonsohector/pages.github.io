@@ -1,12 +1,13 @@
 <html><head></head>
 
 <body>
-
+<p>%API_KEY%</p>
 
 test!
 
 <script  type="module">
-
+	
+	require("dotenv").config();
 	const api_key = process.env.API_KEY;
 	console.log(api_key)
 	
