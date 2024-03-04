@@ -29,17 +29,21 @@ C -->|Two| E[Result 2]
 Github
 
 ```mermaid
-gitGraph:
-    commit "Ashish"
-    branch newbranch
-    checkout newbranch
-    commit id:"1111"
-    commit tag:"test"
-    checkout main
-    commit type: HIGHLIGHT
-    commit
-    merge newbranch
-    commit
-    branch b2
-    commit
+%%{init: { 'logLevel': 'debug', 'gitGraph': { 'mainBranchName': 'master', 'rotateCommitLabel': true}} }%%
+---
+title: Example Git diagram
+---
+gitGraph
+   commit id: "your_custom_id"
+   commit type: HIGHLIGHT 
+   tag: "RC_1"
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout master
+   merge develop  tag: "RC_1"
+   commit
+   commit
 ```
